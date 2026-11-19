@@ -1,0 +1,39 @@
+# Maven Build Output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.flattened-pom.xml
+
+# Keep Maven Wrapper JAR (required for builds without Maven installed)
+!.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot Specific
+*.log
+logs/
+*.jar
+*.war
+*.ear
+application-local.properties
+application-local.yml
+*.pid.lock
+
+# IDE: VS Code
+.vscode/
+
+# Security & Secrets
+.env
+.env.*
+*.pem
+*.key
+*.keystore
+*.crt
+
+# OS Specific
+.DS_Store
+Thumbs.db
