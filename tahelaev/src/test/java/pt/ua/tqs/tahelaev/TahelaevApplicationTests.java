@@ -11,6 +11,7 @@ class TahelaevApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 	@Test

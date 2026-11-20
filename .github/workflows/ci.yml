@@ -27,4 +27,6 @@ jobs:
           cache: maven
 
       - name: Build and run quality checks
-        run: ./mvnw clean verify
+        run: |
+          chmod +x mvnw
+          ./mvnw clean verify
