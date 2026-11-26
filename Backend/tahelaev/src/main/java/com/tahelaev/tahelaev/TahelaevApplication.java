@@ -1,4 +1,4 @@
-package pt.ua.tqs.tahelaev;
+package com.tahelaev.tahelaev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

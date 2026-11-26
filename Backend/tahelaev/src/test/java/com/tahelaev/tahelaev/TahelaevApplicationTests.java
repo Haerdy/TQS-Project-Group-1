@@ -1,4 +1,4 @@
-package pt.ua.tqs.tahelaev;
+package com.tahelaev.tahelaev;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
