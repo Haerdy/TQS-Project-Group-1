@@ -5,14 +5,20 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     name: Build and test
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     defaults:
       run:
         working-directory: tahelaev
@@ -26,7 +32,17 @@ jobs:
           java-version: "21"
           cache: maven
 
-      - name: Build and run quality checks
+      - name: Build, test and check coverage (JaCoCo >= 80%)
         run: |
           chmod +x mvnw
-          ./mvnw clean verify
+          ./mvnw -B clean verify
+
+      - name: Upload test and coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            tahelaev/target/surefire-reports/
+            tahelaev/target/site/jacoco/
+          if-no-files-found: ignore

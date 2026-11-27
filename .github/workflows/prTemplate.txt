@@ -1,0 +1,44 @@
+## Summary
+
+<!-- What does this PR do, and why? One or two sentences. -->
+
+## Related work
+
+- Jira: <!-- e.g. TL-12 -->
+- User story: <!-- e.g. US05 -->
+- Business rules: <!-- e.g. BR2, BR8 — or "none" -->
+
+## Type of change
+
+- [ ] Feature
+- [ ] Bug fix
+- [ ] Tests only
+- [ ] Refactor (no behaviour change)
+- [ ] CI / build / config
+- [ ] Docs
+
+## How was it tested?
+
+- [ ] Unit tests added or updated
+- [ ] Integration tests added or updated
+- [ ] Acceptance tests (Gherkin) added or updated, tagged with the story and rules (e.g. `@US05 @BR8`)
+- [ ] Business rules tested at their boundaries (e.g. BR1: 19 % refused, 20 % accepted)
+- [ ] `./mvnw clean verify` passes locally
+
+<!-- Anything tested by hand? Describe the steps here. -->
+
+## Screenshots / API examples
+
+<!-- For UI changes: before/after screenshots. For new endpoints: an example request and response. Delete if not relevant. -->
+
+## Checklist
+
+- [ ] PR title follows Conventional Commits with the Jira key, e.g. `feat(TL-12): minimal fleet simulator`
+- [ ] Tenant isolation respected: data from another hospital returns 404, wrong role returns 403 (BR10)
+- [ ] No secrets, passwords or tokens in code or config
+- [ ] Copilot review comments fixed or answered
+- [ ] Docs updated if behaviour, setup or API changed
+
+## Notes for the reviewer
+
+<!-- Where should the reviewer look first? Anything you are unsure about? -->
