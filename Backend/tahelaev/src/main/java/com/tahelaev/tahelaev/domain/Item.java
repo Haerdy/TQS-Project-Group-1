@@ -27,24 +27,25 @@ public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "value", nullable = false)
     private float value;
 
-    @Column(nullable = false)
+    @Column(name = "iva", nullable = false)
     private float iva;
 
-    @Column(nullable = false)
+    @Column(name = "weight", nullable = false)
     private float weight;
 
-    @Column(nullable = false)
+    @Column(name = "is_temp_sensitive", nullable = false)
     private boolean isTempSensitive;
 
-    @Column
+    @Column(name = "temp")
     private Float temp;
 
     @ManyToOne

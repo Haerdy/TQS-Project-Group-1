@@ -20,15 +20,15 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class Refrigerated extends Robot {
 
-    @Column
+    @Column(name = "min_temp_c")
     private Float minTempC;
 
-    @Column
+    @Column(name = "max_temp_c")
     private Float maxTempC;
 
-    @Column
+    @Column(name = "target_temp_c")
     private Float targetTempC;
 
-    @Column
+    @Column(name = "current_temp_c")
     private Float currentTempC;
 }

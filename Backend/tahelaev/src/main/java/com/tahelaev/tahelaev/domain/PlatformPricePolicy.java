@@ -27,18 +27,19 @@ public class PlatformPricePolicy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "robot_monthly_fee", nullable = false)
     private float robotMonthlyFee;
 
-    @Column(nullable = false)
+    @Column(name = "refrig_monthly_fee", nullable = false)
     private float refrigMonthlyFee;
 
-    @Column(nullable = false)
+    @Column(name = "mileage_percent_fee", nullable = false)
     private float mileagePercentFee;
 
-    @Column(nullable = false)
+    @Column(name = "parcel_percent_fee", nullable = false)
     private float parcelPercentFee;
 
     @OneToOne

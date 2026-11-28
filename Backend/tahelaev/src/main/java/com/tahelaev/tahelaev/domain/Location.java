@@ -1,5 +1,6 @@
 package com.tahelaev.tahelaev.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Location {
 
+    @Column(name = "latitude")
     private Double latitude;
+
+    @Column(name = "longitude")
     private Double longitude;
 }

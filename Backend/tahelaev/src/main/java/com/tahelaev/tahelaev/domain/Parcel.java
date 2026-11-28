@@ -37,47 +37,48 @@ public class Parcel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "tracking_code", nullable = false, unique = true)
     private String trackingCode;
 
-    @Column(nullable = false)
+    @Column(name = "pickup_code", nullable = false)
     private String pickupCode;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "size", nullable = false)
     private Size size;
 
-    @Column(nullable = false)
+    @Column(name = "weight", nullable = false)
     private float weight;
 
-    @Column(nullable = false)
+    @Column(name = "needs_refrigeration", nullable = false)
     @Builder.Default
     private boolean needsRefrigeration = false;
 
-    @Column
+    @Column(name = "storage_temperature")
     private Float storageTemperature;
 
-    @Column(nullable = false)
+    @Column(name = "delivery_address", nullable = false)
     private String deliveryAddress;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "status", nullable = false)
     @Builder.Default
     private ParcelStatus status = ParcelStatus.CREATED;
 
-    @Column(nullable = false)
+    @Column(name = "created_at", nullable = false)
     @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @Column
+    @Column(name = "pickup_deadline")
     private LocalDateTime pickupDeadline;
 
-    @Column(nullable = false)
+    @Column(name = "pickup_address", nullable = false)
     private String pickupAddress;
 
-    @Column(nullable = false)
+    @Column(name = "is_urgent", nullable = false)
     @Builder.Default
     private boolean isUrgent = false;
 

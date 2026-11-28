@@ -27,15 +27,16 @@ public class InstancePricePolicy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "base_km_fee", nullable = false)
     private float baseKmFee;
 
-    @Column(nullable = false)
+    @Column(name = "refrigerated_km_fee", nullable = false)
     private float refrigeratedKmFee;
 
-    @Column(nullable = false)
+    @Column(name = "parcel_percent_fee", nullable = false)
     private float parcelPercentFee;
 
     @OneToOne

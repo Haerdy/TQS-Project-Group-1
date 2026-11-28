@@ -44,40 +44,41 @@ public abstract class Robot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "status", nullable = false)
     @Builder.Default
     private RobotStatus status = RobotStatus.OFFLINE;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "lifecycle", nullable = false)
     @Builder.Default
     private RobotLifecycle lifecycle = RobotLifecycle.REGISTERED;
 
-    @Column(nullable = false)
+    @Column(name = "battery", nullable = false)
     @Builder.Default
     private Float battery = 100.0f;
 
-    @Column(nullable = false)
+    @Column(name = "mileage_km", nullable = false)
     @Builder.Default
     private Float mileageKm = 0.0f;
 
-    @Column(nullable = false)
+    @Column(name = "max_speed_km", nullable = false)
     private Float maxSpeedKm;
 
-    @Column(nullable = false)
+    @Column(name = "max_weight", nullable = false)
     private Float maxWeight;
 
-    @Column(nullable = false)
+    @Column(name = "cur_weight", nullable = false)
     @Builder.Default
     private Float curWeight = 0.0f;
 
-    @Column(nullable = false)
+    @Column(name = "cargo_space_liters", nullable = false)
     private Double cargoSpaceLiters;
 
     @Embedded

@@ -31,27 +31,28 @@ public class Alert {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name = "type", nullable = false)
     private AlertType type;
 
-    @Column(nullable = false)
+    @Column(name = "message", nullable = false)
     private String message;
 
-    @Column(nullable = false)
+    @Column(name = "value", nullable = false)
     private float value;
 
-    @Column(nullable = false)
+    @Column(name = "time", nullable = false)
     @Builder.Default
     private LocalDateTime time = LocalDateTime.now();
 
-    @Column(nullable = false)
+    @Column(name = "acknowledged", nullable = false)
     @Builder.Default
     private boolean acknowledged = false;
 
-    @Column
+    @Column(name = "ack_time")
     private LocalDateTime ackTime;
 
     @ManyToOne

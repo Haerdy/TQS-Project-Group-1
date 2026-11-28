@@ -32,16 +32,17 @@ public class Fleet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
     private UUID id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "fleet_name", nullable = false, unique = true)
     private String fleetName;
 
-    @Column(nullable = false)
+    @Column(name = "no_of_robots", nullable = false)
     @Builder.Default
     private int noOfRobots = 0;
 
-    @Column(nullable = false)
+    @Column(name = "no_of_active_robots", nullable = false)
     @Builder.Default
     private int noOfActiveRobots = 0;
 

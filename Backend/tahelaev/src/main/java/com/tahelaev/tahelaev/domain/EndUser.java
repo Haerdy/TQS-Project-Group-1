@@ -25,7 +25,7 @@ import java.util.List;
 @SuperBuilder
 public class EndUser extends User {
 
-    @Column
+    @Column(name = "address")
     private String address;
 
     @ManyToOne
